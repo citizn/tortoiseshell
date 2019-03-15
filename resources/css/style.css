@@ -4,69 +4,143 @@
 /*Universal Styles */
 
 html {
+  font-family: Helvetica, sans-serif;
   font-size: 18px;
   background-color: white;
-  line-height: 1.4;
 }
 
 body {
-  font-family: Helvetica, sans-serif;
+  line-height: 1.4; /*1.4rem*/
 }
 
 .container {
   max-width: 960px;
-  margin: 0 auto;
+  margin: auto;
 }
 
-/* Header Section */
+.flex {
+  display: flex;
+}
+
+/*Header Section */
 
 header {
-  color: white;
-  background-color: cadetblue;
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  padding: 1rem 0 1rem 2rem;
-  position: relative;
-  top: 1rem;
-}
-
-.logo {
-  display: flex;
-  align-items: center;
-}
-
-header img {
-  height: 1.5rem;
-  padding-right: 1rem;
-}
-
-nav ul {
-  display: flex;
-  align-items: center;
-}
-
-li {
-  padding-right: 2rem;
-}
-
-/* Main Banner */
-
-.main-banner {
   background-image: url("../images/glasses-bg.png");
   background-repeat: no-repeat;
   background-position: center;
   background-size: cover;
+  padding-top: 1rem;
   height: 30rem;
 }
 
-.headline {
+h1 {
   font-size: 2rem;
   font-weight: bold;
-  position: relative;
-  top: 14rem;
-  left: 33rem;
-  padding: 1.5rem 5rem;
-  background-color: white;
   line-height: 1.2;
+}
+
+nav {
+  padding: 1rem 0;
+  background-color: cadetblue;
+  color: white;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+nav div {
+  display: flex;
+  align-items: center;
+}
+
+nav img {
+  height: 1.5rem;
+  margin-right: 1rem;
+  margin-left: 2rem;
+}
+
+ul {
+  margin-right: 1rem;
+}
+
+ul li {
+  display: inline;
+  padding: 1rem;
+}
+
+.main.banner {
+  background-color: white;
+  padding: 1.5rem 5rem;
+  display: inline-block; /*why?*/
+  margin-top: 10rem;
+  margin-right: -2rem;
+  line-height: 1.2; /*why again? 1.2rem?*/
+}
+
+header .flex {
+  justify-content: flex-end;
+}
+
+/* Supporting Section */
+
+.supporting {
+  display: flex;
+  justify-content: center;
+}
+
+/* Service */
+
+.service {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: center;
+  text-align: center;
+  margin: 3rem;
+  width: 5rem;
+  height: 8rem;
+}
+
+.service img {
+  width: 5rem;
+  margin-bottom: 1rem;
+}
+
+.service img.paper-icon {
+  width: 3.5rem;
+}
+
+/* Info */
+
+.info {
+  width: 35%;
+  margin-right: 5%;
+  margin-bottom: 5rem;
+}
+
+.info p {
+  padding: 1rem 0;
+}
+
+.title {
+  background-color: cadetblue;
+  padding: .5rem 1.25rem;
+  font-weight: bold;
+  color: white;
+  max-width: 10rem;
+}
+
+/* Footer Section */
+
+footer {
+  background-color: azure;
+  padding: 4rem 2rem;
+  display: flex;
+  align-items: center;
+}
+
+footer img {
+  height: 1.5rem;
+  margin-right: 1rem;
+  margin-left: 2rem;
 }
